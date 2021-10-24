@@ -1,17 +1,18 @@
-# hostloc_getPoints
+# skyeysnow_getPoints
 
-小鸡定时获取hostloc积分
+从 [hostloc 获取积分](https://github.com/Jox2018/hostloc_getPoints)修改来的：
 
-github action大规模失效，mjj平均一人10鸡，以下可以部署到自己的小鸡上
+小鸡自动登录 skyeysnow 获取金币
 
 **第一步**下载下列代码
-https://github.com/Jox2018/hostloc_getPoints/blob/main/hostloc_auto_get_points.py
+https://github.com/NimaQu/skyeysnow_getPoints/blob/main/skyeysnow_auto_get_points.py
 
-**第二步**把175，176行代码改为
+复制 config.example.py 为 config.py 并填写
 
 ```
 username = "账户"
 password = "密码"
+user_agent = "自定义 user_agent"
 ```
 
 **第三步**上面文件上传到小鸡
@@ -26,10 +27,10 @@ crontab -e
 添加
 
 ```shell
-10 2 * * * sleep 5;cd /root/hostloc/ && /usr/local/bin/python3 /root/hostloc/hostloc_auto_get_points.py
+10 2 * * * sleep 5;cd /root/hostloc/ && /usr/local/bin/python3 /root/skyeysnow/skyeysnow_auto_get_points.py
 ```
 
-/root/hostloc/为你上传的路径
+/root/skyeysnow/为你上传的路径
 /usr/local/bin/python3为你小鸡python3的引用路径
 
 **提示**
@@ -38,7 +39,7 @@ crontab -e
 
 ```python
 Traceback (most recent call last):
-  File "/root/hostloc/hostloc_auto_get_points.py", line 6, in
+  File "/root/skyeysnow/skyeysnow_auto_get_points.py", line 6, in
    ...
 ```
 
@@ -53,9 +54,3 @@ pip3 install requests
 ```shell
 cd /root/hostloc/ && /usr/local/bin/python3 /root/hostloc/hostloc_auto_get_points.py
 ```
-
-
-
-env
-HOSTLOC_USERNAME=username1,username2...
-HOSTLOC_PASSWORD=password1,password2...
