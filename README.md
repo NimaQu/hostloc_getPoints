@@ -4,10 +4,12 @@
 
 小鸡自动登录 skyeysnow 获取金币
 
-**第一步**下载下列代码
+**第一步**下载下列代码和配置
 https://raw.githubusercontent.com/NimaQu/skyeysnow_getPoints/main/skyeysnow_auto_get_points.py
 
-复制 config.example.py 为 config.py 并填写
+https://raw.githubusercontent.com/NimaQu/skyeysnow_getPoints/main/config.example.py
+
+复制 config.example.py 为 config.py 或直接创建文件并填写
 
 ```
 username = "账户"
